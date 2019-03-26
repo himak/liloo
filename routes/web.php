@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/pages', 'PageController@index');
+Route::get('/page/{page}', 'PageController@show');
+
+Route::get('/posts', 'PostController@index');
+Route::get('/post/{post}', 'PostController@show');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
